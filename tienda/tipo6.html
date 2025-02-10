@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style.scss">
+    <link rel="stylesheet" href="../src/carro.scss">
+    <title>Pure essence | Pedidos</title>
+    <link rel="icon" href="../img/logoEntero.png" sizes="100x100">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" >
+
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <div class="logo1">
+        <a href="../index.html">
+          <img src="../img/logo2.png" alt="logo" class="imagen-superior">
+           <img src="../img/fondoLogo.png" alt="" class="fondoLogo">
+        </a>
+        
+      </div>
+      <div class="linea"></div>
+      <div class="logo2">
+        <p class="login">Login</p>
+      </div>
+    </div>
+      
+    
+    <div class="categorias">
+
+      <ul>
+        <li><a href="#">Tipos</a>
+          <ul>
+            <li><a href="#">Hombre</a>
+              <ul>
+                <li><a href="../submenus/tipo4.1.1.html">Hugo Boss The Scent</a></li>
+                <li><a href="../submenus/tipo5.html">Eau de Toilette</a></li>
+                <li><a href="../submenus/tipo5.html">Eau de Cologne</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Mujer</a>
+              <ul>
+                <li><a href="../submenus/tipo4.3.1.html">Paradoxe Intense Prada</a></li>
+                <li><a href="../submenus/tipo5.html">Eau de Toilette</a></li>
+                <li><a href="../submenus/tipo5.html">Eau de Cologne</a></li>
+              </ul>
+            </li>
+            <li><a href="../submenus/tipo5.html">Top Sellers</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="../tienda/tipo5.html">Ofertas</a>
+        </li>
+
+        <li><a href="../tienda/tipo6.html">Pedidos</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="buscador">
+      <input type="text" placeholder="Buscar...">
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </nav>
+
+      <main>
+
+        <div class="formulario">
+          <h2>Información del Usuario</h2>
+          
+          <div class="resto">
+            <div class="izqform">
+              <label for="nombre">Nombre</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Tu nombre"
+                  pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,}"
+                  required
+                >
+            
+                <label for="apellidos">Apellidos</label>
+                <input
+                  type="text"
+                  id="apellidos"
+                  name="apellidos"
+                  placeholder="Tus apellidos"
+                  pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,}"
+                  required
+                >
+            
+                <label for="email">Correo Electrónico</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Tu correo electrónico"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  required
+                >
+            
+                <label for="numCuenta">Número de cuenta</label>
+                <input
+                  type="text"
+                  id="numCuenta"
+                  name="numCuenta"
+                  placeholder="Número de cuenta"
+                  pattern="\d{5,15}"
+                  required
+                >
+              </div>
+            
+              <div class="derForm">
+                <label for="codVerificacion">Código de verificación</label>
+              <input
+                type="text"
+                id="codVerificacion"
+                name="codVerificacion"
+                placeholder="Código de verificación"
+                pattern="\d{6}"
+                required
+              >
+          
+              <label for="direccion">Dirección</label>
+              <textarea
+                type="text"
+                id="direccion"
+                name="direccion"
+                placeholder="Escribe tu dirección"
+                pattern="[A-Za-z0-9ÁÉÍÓÚáéíóúÑñ\s.,]{5,}"
+                required
+                ></textarea>
+          
+              <label for="tipo-entrega">Tipo de entrega:</label>
+              <select id="tipo-entrega" name="tipo-entrega" required>
+                <option value="domicilio">A domicilio</option>
+                <option value="recoger-tienda">A recoger en tienda</option>
+                <option value="puesto-recogida">Puesto de recogida</option>
+              </select>
+            </div>
+          
+          </div>
+            <div class="infoSend">
+              <button>Enviar información</button>
+
+            </div>
+            
+        </div>
+        
+        <!--* --------CARRITo---------- -->
+        <div class="zonaCarrito">
+          <div class="carrito">
+            <div class="arribaCarro">
+              <div class="tituloArribaCarro">
+                <h2>Mi cesta (2 artículos)</h2>
+              </div>
+              <div class="restoArribaCarro">
+                <p>Precio</p>
+                <p>Cantidad</p>
+                <p>Subtotal</p>
+              </div> 
+            </div>
+            <hr style="opacity: 50%;">
+            <div class="abajoCarro">
+              <div class="imgCarrito">
+                <img src="../img/blackopium.webp" alt="perfume blackopium" class="miniatura-mediano">
+              </div>
+              <div class="prodCarrito">
+                <h4>blackopium</h4>
+                <p>eau de perfum</p>
+                <p>90mL</p>
+              </div>
+              <div class="precioCarrito">
+                <p>79,99€</p>
+              </div> 
+              <div class="cantidadCarrito">
+                <button class="cantidad">-</button>
+                <p>1</p>
+                <button class="cantidad">+</button>
+              </div>
+              <div class="subtotalCarrito">
+                <p>79,99</p>
+              </div>
+              <div class="papeleraCarrito">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <hr style="opacity: 50%;">
+            <div class="abajoCarro">
+              <div class="imgCarrito">
+                <img src="../img/hugoboss.webp" alt="perfume blackopium" class="miniatura-pequeno">
+              </div>
+              <div class="prodCarrito">
+                <h4>Hugo Boss</h4>
+                <p>eau de cologne</p>
+                <p>70mL</p>
+              </div>
+              <div class="precioCarrito">
+                <p>59,99€</p>
+              </div> 
+              <div class="cantidadCarrito">
+                <button class="cantidad">-</button>
+                <p>2</p>
+                <button class="cantidad">+</button>
+              </div>
+              <div class="subtotalCarrito">
+                <p>119,98</p>
+              </div>
+              <div class="papeleraCarrito">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <hr style="opacity: 50%;">
+            <div class="totalCarro">
+              <p>Cantidad Total:</p>
+              <p>50,99€</p>
+            </div>
+            
+            <div class="comprarCarro">
+              <button>COMPRAR YA</button>
+            </div>
+          </div>
+          <div class="animationPedido">
+            <img src="../img/camion.png" alt="" class="camion">
+            <p>El pedido saldrá pronto a reparto!</p>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Enlaces útiles</h3>
+                <ul>
+                    <li><a href="../tienda/tipo8.html">Formulario de Contacto</a></li>
+                    <li><a href="../tienda/tipo7.html">Aviso Legal</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram icono-instagram"></i>
+                      </a>
+                      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                          <i class="fab fa-facebook-f icono-facebook"></i>
+                      </a>
+                      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                          <i class="fab fa-brands fa-x-twitter"></i>
+                      </a>
+                      <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube icono-youtube"></i>
+                </a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: <a href="mailto:info@pureessence.com">info@pureessence.com</a></p>
+                <p>Teléfono: +34 123 456 789</p>
+                <p>Dirección: Calle Perfume, 123, Madrid, España</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pure Essence. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

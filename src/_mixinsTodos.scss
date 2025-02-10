@@ -1,0 +1,9 @@
+@use '_variables' as vars;
+@use '_mixins' as mixins;
+
+@import 'index';
+@import 'productos';
+@import 'tienda';
+@import 'carro';
+@import 'avisoLegal';
+@import 'formContacto';

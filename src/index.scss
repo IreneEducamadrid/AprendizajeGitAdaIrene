@@ -1,0 +1,284 @@
+// Variables
+$grayscale-value: 100%;
+$hover-scale: 1.05;
+$hover-translateZ: 10px;
+$hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+$transition-duration: 0.5s;
+
+.bgOfertas {
+    color: lightgray;
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    height: 40px;
+
+    .ofertas-container {
+        display: flex;
+        width: 200%;
+        animation: oferta 20s linear infinite;
+    }
+
+    .ofertas {
+        width: 180%;
+        white-space: nowrap;
+        margin-top: 9px; //esto asi mejor ????????  
+        p {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+
+            span {
+                margin-right: 200px;
+            }
+        }
+    }
+}
+
+@keyframes oferta {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/**----------------CONTENIDO  */
+$secciones: (
+    "hombre": "../img/hombre.png",
+    "mujer": "../img/mujer.png",
+    "neutro": "../img/pareja.png"
+);
+
+
+.contenido {
+    display: flex;
+    width: 100%;
+    perspective: 1000px;
+    height: 600px;
+
+    h2 {
+        text-align: center;
+    }
+
+    // Bucle
+    @each $nombre, $imagen in $secciones {
+        .#{$nombre} {
+            width: 34%;
+            transition: transform $transition-duration ease, box-shadow $transition-duration ease;
+            transform-style: preserve-3d;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-image: url($imagen);
+            background-size: cover;
+            filter: grayscale($grayscale-value);
+
+            &:hover {
+                transform: scale($hover-scale) translateZ($hover-translateZ);
+                box-shadow: $hover-shadow;
+                z-index: 2;
+                transition: 1s;
+                filter: none;
+            }
+        }
+    }
+}
+
+div.pinyon-script-regular {
+    width: 50%;
+    margin: auto;
+    font-size: 2rem;
+    background-color: rgba(240, 248, 255, 0.921);
+    transform: skew(-20deg);
+    padding: 0px 12px;
+}
+
+
+aside {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        font-size: 2rem;
+        color: #333;
+        text-align: center;
+        margin-top: 3%;
+        margin-bottom: 10%;
+
+    }
+
+    article {
+        margin-bottom: 30px;
+        width: 100%;  
+        display: flex;
+        margin-bottom: 80px;
+
+        .palabras{
+            width: 60%;
+            margin: auto;
+        }
+
+        .imagentexto{
+            width: 40%;
+        }
+
+        .palabras2{
+            width: 60%;
+            margin: auto;
+
+        }
+
+        .imagentexto2{
+            width: 40%;
+  
+        }
+
+        iframe{
+            width: 60%;
+            height: auto;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        figure {
+            margin: 0 0;
+            text-align: center;
+
+            img{
+                width: 60%;
+            } 
+            video {
+                width: 60%;
+                height: 450px;
+                border-radius: 10px;
+            }
+
+            figcaption {
+                font-size: 0.9rem;
+                color: #777;
+                margin-top: 10px;
+            }
+        }
+
+        a {
+            color: #F3B2A1;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+//* RESPONsive
+
+// Responsive movil
+@media only screen and (max-width: 767px) {
+
+    // Video de fondo
+    .video {
+        height: 300px;
+
+        .textoVideo {
+            margin-top: 100px;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            button {
+                padding: 8px 20px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    // Ofertas
+    .bgOfertas {
+        height: 30px;
+
+        .ofertas-container {
+            animation-duration: 15s; 
+        }
+
+        .ofertas {
+            p {
+                font-size: 12px;
+
+                span {
+                    margin-right: 100px;
+                }
+            }
+        }
+    }
+
+    // Contenido principal
+    .contenido {
+        flex-direction: column;
+        height: auto;
+
+        .hombre, .mujer, .neutro {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    // Aside 
+    aside {
+        padding: 10px;
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        article {
+            flex-direction: column;
+            margin-bottom: 40px;
+
+            .palabras, .palabras2 {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .imagentexto, .imagentexto2 {
+                width: 100%;
+                text-align: center;
+
+                img, video {
+                    width: 80%;
+                    height: auto;
+                }
+
+                iframe {
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+}

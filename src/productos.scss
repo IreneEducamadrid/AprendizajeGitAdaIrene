@@ -1,0 +1,450 @@
+@use '_variables.scss' as vars;
+@use '_mixins' as mixins;
+
+@include mixins.generate-button(primary, #F3B2A1); 
+@include mixins.generate-button(secondary, #333);
+
+$primary-color: #F3B2A1;
+$hover-shadow: inset 400px 0 0 0 rgba(255, 255, 255, 0.347);
+$transition-duration: 0.4s;
+
+//* FUNCIONES
+@function oscurecer($primary-color, $porcentaje) {
+    @return darken($primary-color, $porcentaje);
+}
+
+$color-base: #F3B2A1;
+
+// Clase base para botones
+.boton-base {
+    background-color: $primary-color;
+    border: 1px solid #0000007e;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.26);
+    transition: ease-out $transition-duration;
+
+    &:hover {
+        box-shadow: $hover-shadow;
+        color: #333;
+    }
+}
+
+// Clase base para imágenes
+.imagen-base {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+}
+
+// Clase base para textos de productos
+.texto-base {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+// container
+.container {
+    display: flex;
+    width: 95%;
+    align-items: center;
+    margin: 4% 2%;
+
+    .btn-primary {
+        background-color: #F3B2A1;
+    }
+
+    .imagen {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        align-self: center;
+
+        .main-image {
+            @extend .imagen-base;
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #b8b8b8;
+            cursor: pointer;
+            z-index: 10;
+
+            &.left-arrow {
+                left: 10px;
+            }
+
+            &.right-arrow {
+                right: 10px;
+            }
+        }
+    }
+
+    .imagenes {
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        margin-top: 10px;
+
+        .thumbnail {
+            @include mixins.image-hover(1.1);
+            width: 80px;
+            height: 80px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: transform 0.2s, box-shadow 0.2s;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
+    .derecha {
+        width: 600px;
+        height: 435px;
+        margin-left: 5%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .titulo {
+            margin-top: 25px;
+            height: 80px;
+        }
+
+        .descripcion {
+            height: 70px;
+        }
+
+        .rating {
+            display: flex;
+            height: 40%;
+
+            .estrellas {
+                display: flex;
+                margin-right: 10px;
+
+                .estrellita {
+                    width: 100px;
+                }
+            }
+        }
+
+        .precio {
+            height: 40px;
+            font-size: 1.6rem;
+        }
+
+        .botones {
+            display: flex;
+
+            .boton {
+                margin-right: 30px;
+
+                button:not(.cantidad button) {
+                    background-color: vars.$primary-color;
+                    margin-top: 20px;
+                    padding: 10px 45px;
+                    border: 1px #0000007e;
+                    border-radius: vars.$border-radius;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.26);
+                    transition: ease-out $transition-duration;
+                    text-decoration: none;
+
+                    &:hover {
+                        box-shadow: $hover-shadow;
+                        color: #333;
+                    }
+                }
+            }
+        }
+
+        .cantidad {
+            display: flex;
+            text-align: center;
+            height: 100%;
+            align-self: center;
+
+            p {
+                margin: 20px 10px;
+                font-size: 1.5rem;
+            }
+
+            button {
+                background-color: $primary-color;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                border: 1px #0000007e;
+                border-radius: 30px;
+                font-weight: 600;
+                margin-top: 20px;
+                cursor: pointer;
+                transition: $transition-duration;
+                text-decoration: none;
+
+                &:hover {
+                    box-shadow: $hover-shadow;
+                    background-color: oscurecer($color-base, 30%);
+                }
+            }
+        }
+    }
+
+    .derechisima {
+        background-color: rgb(255, 255, 255);
+        width: 300px;
+        height: 430px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+        .datos {
+
+            .resumenTexto{
+                width: 100%;
+                display: flex;
+                .izqResumen{
+                    width: 73%;
+                }
+
+                .derResumen{
+                    width: 27%;
+                    text-align: right;
+                    margin-right: 5%;
+                }
+            }
+
+
+            h2{
+                text-align: center;
+            }
+
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            
+            p, h3{
+                margin-left: 5%;
+            }
+
+            h3{
+                margin-bottom: 10px;
+            }
+
+
+            
+
+            :is(button) {
+                width: 60%;
+                align-self: center;
+                background-color: $primary-color;
+                height: 30px;
+                border: 1px #0000007e;
+                border-radius: 8px;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin-top: 10px;
+                cursor: pointer;
+                box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.26);
+                transition: ease-out $transition-duration;
+                text-decoration: none;
+
+                &:hover {
+                    box-shadow: $hover-shadow;
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+
+
+.recomendaciones {
+    margin-top: -80px;
+
+    h3 {
+        margin-left: 20px;
+        font-size: 1.4rem;
+    }
+
+    .prodsRecomendados {
+        margin-top: 10px;
+        display: flex;
+        width: 400px;
+        justify-content: space-around;
+        margin-left: 25px;
+
+        p {
+            margin: auto;
+        }
+
+        :where(.miniImagen) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            padding: 4px 6px;
+
+            img {
+                width: 70px;
+                height: 70px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+
+  
+  .titulo h1::after {
+    content: "✨";
+    color: gold;
+  }
+
+footer{
+    margin-top: 5%;
+}
+
+
+// Responsive movil
+@media (max-width: 768px) {
+
+    main{
+        margin-left: 5%;
+    }
+
+    .container {
+        flex-direction: column; 
+        align-items: center;
+        margin: 10px 0;
+
+        
+
+        .imagen {
+            margin-left: 0; 
+            max-width: 100%;
+
+            .main-image {
+                width: 100%; // Ajustar imagen al ancho completo
+                margin-left: 0;
+            }
+
+            i {
+                font-size: 1.5rem; // Reducir tamaño de flechas
+            }
+        }
+
+        .imagenes {
+            flex-wrap: wrap; // Permitir que las miniaturas se envuelvan
+            justify-content: center;
+
+            .thumbnail {
+                width: 60px; // Reducir tamaño de miniaturas
+                height: 60px;
+                margin: 5px;
+            }
+        }
+
+        .derecha {
+            width: 100%; // Ajustar al ancho completo
+            margin-left: 0;
+            margin-top: 20px;
+
+            .titulo {
+                margin-top: 10px;
+                height: auto; // Ajustar altura automática
+            }
+
+            .descripcion {
+                height: auto; // Ajustar altura automática
+            }
+
+            .rating {
+                flex-direction: column; // Cambiar a columna
+                align-items: center;
+                height: auto;
+
+                .estrellas {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .botones {
+                flex-direction: column; // Cambiar a columna
+                align-items: center;
+
+                .boton {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+
+                    button {
+                        width: 100%; // Ajustar botón al ancho completo
+                    }
+                }
+
+                .cantidad {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .derechisima {
+            width: 100%; // Ajustar al ancho completo
+            margin-top: 20px;
+
+            .datos {
+                button {
+                    width: 80%; // Ajustar botón al ancho completo
+                }
+            }
+        }
+    }
+
+    // Recomendaciones
+    .recomendaciones {
+        margin-top: 20px;
+
+        h3 {
+            text-align: center; // Centrar el título
+        }
+
+        .prodsRecomendados {
+            flex-direction: column; // Cambiar a columna
+            align-items: center;
+            width: 100%;
+
+            p {
+                margin: 5px 0;
+            }
+
+            .miniImagen {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+
+}

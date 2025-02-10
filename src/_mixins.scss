@@ -1,0 +1,75 @@
+@mixin button-style($color) {
+    background-color: $color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+
+    &:hover {
+        box-shadow: inset 400px 0 0 0 rgba(255, 255, 255, 0.347);
+        color: #333;
+    }
+}
+
+@mixin image-hover($scale) {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    &:hover {
+        transform: scale($scale);
+        opacity: 0.8;
+    }
+}
+
+@mixin input-transition($focus-color) {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+        border-color: $focus-color;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        outline: none;
+    }
+}
+
+
+@mixin bounce-animation($duration) {
+    animation: bounce $duration ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@mixin generate-button($color-name, $bg-color) {
+    .btn-#{$color-name} {
+        background-color: $bg-color;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.4s ease-out;
+
+        &:hover {
+            box-shadow: inset 400px 0 0 0 rgba(255, 255, 255, 0.347);
+            color: #333;
+        }
+    }
+}
+
+@mixin responsive-style($breakpoint) {
+    @media only screen and (max-width: #{$breakpoint}px) {
+        @content;
+    }
+}

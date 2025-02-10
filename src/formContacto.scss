@@ -1,0 +1,175 @@
+@use '_mixins' as mixins;
+
+// Placeholder para campos de entrada
+%input-base {
+    width: 70%;
+    padding: 7px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+        border-color: #333;
+        outline: none;
+    }
+}
+
+// Placeholder para botones
+%boton-base {
+    width: 60%;
+    align-self: center;
+    background-color: #F3B2A1;
+    height: 30px;
+    border: 1px #0000007e;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: ease-out 0.4s;
+
+    &:hover {
+        box-shadow: inset 400px 0 0 0 rgba(255, 255, 255, 0.347);
+        color: #333;
+    }
+}
+
+
+
+.derechisima {
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-self: center;
+    margin-top: 4%;
+    padding: 10px;
+
+    button {
+        @include mixins.button-style(#F3B2A1);
+        @extend %boton-base;
+    }
+
+    button:hover {
+        box-shadow: inset 400px 0 0 0 rgba(255, 255, 255, 0.347);
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    label::first-letter{
+        text-transform: uppercase
+    }
+
+    input, textarea {
+        @include mixins.input-transition(#a5a5a5);
+        @extend %input-base;
+    }
+
+    textarea {
+        height: 100px;
+        resize: none;
+    }
+
+    input:invalid, textarea:invalid {
+        border-color: #ff0000; 
+    }
+
+    input:valid, textarea:valid {
+        border-color: #00ff00; 
+    }
+
+    input:focus, textarea:focus {
+        border-color: #333;
+        outline: none; 
+}
+
+    
+}
+
+.datos {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.resto {
+    padding: 10px;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.note {
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+}
+
+
+footer{
+    margin-top: 5%;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px; 
+    }
+
+    .derechisima {
+        width: 100%; 
+        margin-top: 20px; 
+        padding: 15px; 
+
+        h2 {
+            font-size: 20px; 
+            margin-bottom: 15px; 
+        }
+
+        label {
+            font-size: 14px;
+        }
+
+        input, textarea {
+            width: 90%; 
+            font-size: 14px;
+            margin-bottom: 10px; 
+        }
+
+        textarea {
+            height: 80px; 
+        }
+
+        button {
+            width: 90%; 
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    }
+
+    .datos {
+        padding: 0; 
+    }
+
+    .resto {
+        padding: 0; 
+    }
+}

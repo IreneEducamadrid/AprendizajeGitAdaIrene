@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/style.scss">
+    <link rel="stylesheet" href="../src/tienda.scss">
+    <title>Pure essence | Ofertas</title>
+    <link rel="icon" href="../img/logoEntero.png" sizes="100x100">
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@<version>/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+<body>
+  <script type="module" src="main.js"></script>
+  <nav>
+    <div class="logo">
+      <div class="logo1">
+        <a href="../index.html">
+          <img src="../img/logo2.png" alt="logo" class="imagen-superior">
+           <img src="../img/fondoLogo.png" alt="" class="fondoLogo">
+        </a>
+        
+      </div>
+      <div class="linea"></div>
+      <div class="logo2">
+        <p class="login">Login</p>
+      </div>
+    </div>
+      
+    
+    <div class="categorias">
+
+      <ul>
+        <li><a href="#">Tipos</a>
+          <ul>
+            <li><a href="#">Hombre</a>
+              <ul>
+                <li><a href="../submenus/tipo4.1.1.html">Hugo Boss The Scent</a></li>
+                <li><a href="../submenus/tipo5.html">Eau de Toilette</a></li>
+                <li><a href="../submenus/tipo5.html">Eau de Cologne</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Mujer</a>
+              <ul>
+                <li><a href="../submenus/tipo4.3.1.html">Paradoxe Intense Prada</a></li>
+                <li><a href="../submenus/tipo5.html">Eau de Toilette</a></li>
+                <li><a href="../submenus/tipo5.html">Eau de Cologne</a></li>
+              </ul>
+            </li>
+            <li><a href="../submenus/tipo5.html">Top Sellers</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="../tienda/tipo5.html">Ofertas</a>
+        </li>
+
+        <li><a href="../tienda/tipo6.html">Pedidos</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="buscador">
+      <input type="text" placeholder="Buscar...">
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </nav>
+
+    
+
+  
+<main>
+        <!-- * PRODUCTO PRINCIPAL EN GRANDE * -->
+         <div class="tendencia">
+            <h1>Observa nuestra Máxima Tendencia</h1>       
+         </div>
+         
+         <div id="canvas-container" class="modelo-3d"></div>
+
+         <div class="tendencia">
+          <p>Hugo Boss - The Scent - Agua de Perfume</p>
+          <p>Para los más atrevidos</p>
+         </div>
+
+         <!-- * TODOS LOS PRODUCTOS -->
+         <h2 class="ofertas">Nuestros mejores productos... y ahora... a mejor precio! </h2>
+         <div class="cuadricula">
+            <section class="foto">
+              <div class="imagen">
+                <button class="info-btn">
+                  <i class="fa-solid fa-circle-info"></i>
+                </button>
+                <img src="../img/tousCaja.webp" class="img-original"/>
+                <img src="../img/tous.webp" alt="tous caja" class="img-hover">
+                <div class="descripcion">
+                  <p>Fragancia femenina sofisticada y moderna, que combina notas florales y afrutadas con un toque elegante de madera y almizcle. Su aroma dulce y envolvente refleja la esencia de una mujer segura, romántica y con un espíritu vibrante. Perfecta para cualquier ocasión, Love Me es una declaración de amor a la feminidad y la elegancia</p>
+                </div>
+              </div>
+                <div class="texto">
+                  <div class="info">
+                    <p>Love me Tous eau de parfum</p>
+                    <p>50mL | 70mL | 90mL</p>
+                    <p>67,99€</p>
+                  </div>
+                  <div class="carro">
+                    <p><button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button></p>
+                  </div>
+                </div>          
+            </section>
+            <section class="foto">
+              <div class="imagen">
+                <button class="info-btn">
+                  <i class="fa-solid fa-circle-info"></i>
+                </button>
+                <img src="../img/valentinoCaja.webp" class="img-original"/>
+                <img src="../img/valentino.webp" alt="valentino caja" class="img-hover">
+                <div class="descripcion">
+                  <p>Fragancia masculina sofisticada y moderna, que combina notas amaderadas y especiadas con un toque sutil de vetiver y salvia. Su aroma elegante y audaz refleja la actitud rebelde pero refinada del hombre contemporáneo. Perfecta para quienes buscan un perfume distintivo y con carácter.</p>
+                </div>
+              </div>
+                <div class="texto">
+                  <div class="info">
+                    <p>Valentino Uomo eau de parfum</p>
+                    <p>50mL | 70mL | 90mL | 120mL</p>
+                    <p>79,99€</p>
+                  </div>
+                  <div class="carro">
+                    <p><button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button></p>
+                  </div>
+                </div>          
+            </section>
+            <section class="foto">
+              <div class="imagen">
+                <button class="info-btn">
+                  <i class="fa-solid fa-circle-info"></i>
+                </button>
+                <img src="../img/pradaCaja.webp" class="img-original"/>
+                <img src="../img/prada.webp" alt="tous caja" class="img-hover">
+                <div class="descripcion">
+                  <p>Fragancia femenina innovadora y cautivadora que celebra la belleza de las contradicciones. Con notas florales, ambarinas y un toque fresco, su aroma es sofisticado y envolvente. Diseñado para mujeres que desafían lo convencional, Paradoxe es una expresión de elegancia moderna y autenticidad.</p>
+                </div>
+              </div>
+                <div class="texto">
+                  <div class="info">
+                    <p>Prada Paradoxe eau de parfum</p>
+                    <p>30mL | 50mL</p>
+                    <p>130,99€</p>
+                  </div>
+                  <div class="carro">
+                    <p><button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button></p>
+                  </div>
+                </div>          
+            </section>
+            <section class="foto">
+              <div class="imagen">
+                <button class="info-btn">
+                  <i class="fa-solid fa-circle-info"></i>
+                </button>
+                <img src="../img/gartierCaja.webp" class="img-original"/>
+                <img src="../img/gartier.webp" alt="tous caja" class="img-hover">
+                <div class="descripcion">
+                  <p>Fragancia masculina icónica y seductora que combina la frescura de la lavanda y la menta con la calidez de la vainilla y las especias. Su aroma intenso y envolvente refleja fuerza, sensualidad y un estilo inconfundible. Un clásico atemporal para el hombre seguro y carismático.</p>
+                </div>
+              </div>
+                <div class="texto">
+                  <div class="info">
+                    <p>Jean Paul Gartier Le Parfum</p>
+                    <p>50mL | 70mL | 90mL</p>
+                    <p>79,99€</p>
+                  </div>
+                  <div class="carro">
+                    <p><button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button></p>
+                  </div>
+                </div>          
+            </section>
+            <section class="foto">
+              <div class="imagen">
+                <button class="info-btn">
+                  <i class="fa-solid fa-circle-info"></i>
+                </button>
+                <img src="../img/gucciCaja.webp" class="img-original"/>
+                <img src="../img/gucci.webp" alt="tous caja" class="img-hover">
+                <div class="descripcion">
+                  <p>Fragancia femenina elegante y sofisticada, inspirada en la belleza de las flores. Su combinación de notas cítricas, florales y amaderadas crea un aroma fresco y atemporal, ideal para mujeres con un espíritu delicado pero seguro. Perfecta para el día a día o para ocasiones especiales, Flora encapsula la esencia de la feminidad y el glamour moderno.</p>
+                </div>
+              </div>
+                <div class="texto">
+                  <div class="info">
+                    <p>Flora Gucci eau de parfum</p>
+                    <p>50mL | 70mL | 100mL</p>
+                    <p>210,99€</p>
+                  </div>
+                  <div class="carro">
+                    <p><button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button></p>
+                  </div>
+                </div>          
+            </section>
+            <section class="foto">
+              <div class="imagen">
+                <button class="info-btn">
+                  <i class="fa-solid fa-circle-info"></i>
+                </button>
+                <img src="../img/onemillionCaja.webp" class="img-original"/>
+                <img src="../img/onemillion.webp" alt="tous caja" class="img-hover">
+                <div class="descripcion">
+                  <p>Fragancia masculina intensa y sofisticada que combina la frescura vibrante de la mandarina con la calidez del cedro y la riqueza del sándalo. Este Eau de Parfum Intense captura la esencia del éxito dorado, ofreciendo un aroma amaderado y ultrasensual que refleja la energía extática del oro.</p>
+                </div>
+              </div>
+                <div class="texto">
+                  <div class="info">
+                    <p>Million Gold eau de parfum</p>
+                    <p>50mL | 70mL | 90mL</p>
+                    <p>110,99€</p>
+                  </div>
+                  <div class="carro">
+                    <p><button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button></p>
+                  </div>
+                </div>          
+            </section>
+            <section class="foto">
+              <div class="imagen">
+                <button class="info-btn">
+                  <i class="fa-solid fa-circle-info"></i>
+                </button>
+                <img src="../img/blackopiumCaja.webp" class="img-original"/>
+                <img src="../img/blackopium.webp" alt="tous caja" class="img-hover">
+                <div class="descripcion">
+                  <p>Interpretación más intensa y cálida de la fragancia original. Combina notas de rica vainilla, flores blancas y café, creando un aroma sensual y envolvente que reinventa el clásico Eau de Parfum.</p>
+                </div>
+              </div>
+                <div class="texto">
+                  <div class="info">
+                    <p>Black Opium eau de parfum</p>
+                    <p>50mL | 70mL | 90mL | 120mL</p>
+                    <p>79,99€</p>
+                  </div>
+                  <div class="carro">
+                    <p><button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button></p>
+                  </div>
+                </div>          
+            </section>
+            <section class="foto">
+              <div class="imagen">
+                <button class="info-btn">
+                  <i class="fa-solid fa-circle-info"></i>
+                </button>
+                <img src="../img/invictus.webp" class="img-original"/>
+                <img src="../img/invictusCaja.webp" alt="tous caja" class="img-hover">
+                <div class="descripcion">
+                  <p>Fragancia masculina fresca y poderosa que combina notas marinas, cítricas y amaderadas. Su aroma dinámico y energizante evoca la victoria y la fuerza, ideal para hombres que buscan un perfume vibrante y lleno de carácter.</p>
+                </div>
+              </div>
+                <div class="texto">
+                  <div class="info">
+                    <p>Invictus eau de toilette</p>
+                    <p>70mL | 90mL | 120mL</p>
+                    <p>95,99€</p>
+                  </div>
+                  <div class="carro">
+                    <p><button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button></p>
+                  </div>
+                </div>          
+            </section>
+            <section class="foto">
+              <div class="imagen">
+                <button class="info-btn">
+                  <i class="fa-solid fa-circle-info"></i>
+                </button>
+                <img src="../img/hugobossCaja.webp" class="img-original"/>
+                <img src="../img/hugoboss.webp" alt="hugoboss caja" class="img-hover">
+                <div class="descripcion">
+                  <p>Fragancia masculina seductora y sofisticada, con una combinación irresistible de jengibre, cuero y la exótica maninka. Su aroma cálido y envolvente transmite elegancia y magnetismo, ideal para el hombre que deja una impresión duradera.</p>
+                </div>
+              </div>
+                <div class="texto">
+                  <div class="info">
+                    <p>Boss The Scent</p>
+                    <p>60mL | 90mL</p>
+                    <p>69,99€</p>
+                  </div>
+                  <div class="carro">
+                    <p><button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button></p>
+                  </div>
+                </div>          
+            </section>
+
+            
+         </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+          <div class="footer-section">
+              <h3>Enlaces útiles</h3>
+              <ul>
+                  <li><a href="../tienda/tipo8.html">Formulario de Contacto</a></li>
+                  <li><a href="../tienda/tipo7.html">Aviso Legal</a></li>
+                  <li><a href="#">Preguntas Frecuentes</a></li>
+              </ul>
+          </div>
+  
+          <div class="footer-section">
+              <h3>Síguenos</h3>
+              <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-instagram icono-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f icono-facebook"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-youtube icono-youtube"></i>
+              </a>
+              </div>
+          </div>
+  
+          <div class="footer-section">
+              <h3>Contacto</h3>
+              <p>Email: <a href="mailto:info@pureessence.com">info@pureessence.com</a></p>
+              <p>Teléfono: +34 123 456 789</p>
+              <p>Dirección: Calle Perfume, 123, Madrid, España</p>
+          </div>
+      </div>
+  
+      <div class="footer-bottom">
+          <p>&copy; 2024 Pure Essence. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+</body>
+</html>

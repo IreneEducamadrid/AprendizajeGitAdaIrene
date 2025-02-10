@@ -1,0 +1,47 @@
+.container {
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+
+    h1 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+        color: #444;
+    }
+
+    p {
+        margin: 10px 0;
+        text-align: justify;
+    }
+
+    ul {
+        margin: 10px 0 20px 20px;
+    }
+
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+    
+}
+
+@function gradiente($color1, $color2, $direccion: to right) {
+    @return linear-gradient($direccion, $color1, $color2);
+}
+
+body{
+    background: gradiente(#f9ffff, #e8feff);;
+}
