@@ -1,6 +1,6 @@
 # 🌿 Tienda de Perfumes - Proyecto Web
 
-![Tienda de Perfumes](https://via.placeholder.com/800x400?text=Captura+de+Tienda+de+Perfumes)
+![Tienda de Perfumes](img/readme1.png)
 
 ## 📚 Descripción del Proyecto
 
@@ -27,13 +27,13 @@ Este es un proyecto web basado en una **tienda de perfumes**, desarrollado con e
 
 ## 📷 Capturas de la Interfaz
 ### Inicio
-![Inicio](https://via.placeholder.com/600x300?text=Captura+Inicio)
+![Inicio](img/readme2.png)
 
 ### Catálogo de Perfumes
-![Catálogo](https://via.placeholder.com/600x300?text=Captura+Catálogo)
+![Catálogo](img/readme3.png)
 
 ### Carrito de Compras
-![Carrito](https://via.placeholder.com/600x300?text=Captura+Carrito)
+![Carrito](img/readme4.png)
 
 ## 🚀 Cómo Interactuar con la Tienda
 1. **Explorar el Catálogo**: Navega por los productos disponibles.
